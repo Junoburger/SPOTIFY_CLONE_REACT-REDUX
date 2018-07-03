@@ -23,3 +23,4 @@ A song is always just on one playlist. If you select a playlist, you only see so
 
 * a user can click on a button 'artists' to see a list of artists. When you click an artist, you will be able to see all the songs (from the different playlists) that are by that artist
 * a user can move a song from one playlist to another
+# SPOTIFY_CLONE_REACT-REDUX
