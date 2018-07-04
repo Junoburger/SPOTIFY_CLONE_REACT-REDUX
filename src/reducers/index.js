@@ -1,9 +1,15 @@
 import { combineReducers } from 'redux'
 import songsList from './songsList'
-import selectedSong from './selected-song'
+import addSong from './addSong'
+import addList from './addList'
+import selectList from './selectList'
+import selectedSong from './selectSongs'
 
 export default combineReducers({
+  addSong,
+  addList,
 songsList,
-selectedSong
+selectedSong,
+selectList
 
 })

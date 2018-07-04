@@ -10,18 +10,22 @@ class SongsListContainer extends React.PureComponent {
     payload: id
   })
 }
+
   selectSong(id) {
     console.log('selected song:', id)
   }
 
+
   render() {
-    return <SongsList songs={this.props.songs} selectSong={this.selectSong} />
+    return <SongsList songsList={this.props.songsList} selectSong={this.selectSong} />
   }
 }
 
 const mapStateToProps = (state) => {
+// console.log(state.songsList);
   return {
-    songs: state
+    songsList: state.songsList
+
   }
 }
 
