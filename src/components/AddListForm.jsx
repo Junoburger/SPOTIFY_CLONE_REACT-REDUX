@@ -34,6 +34,7 @@ export default class AddListForm extends React.PureComponent {
         title: this.state.title
       })
     }
+
   }
 
   render() {

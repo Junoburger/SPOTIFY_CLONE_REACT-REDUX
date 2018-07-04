@@ -20,8 +20,8 @@ export default class AddSongForm extends React.PureComponent {
   handleChange = (event) => {
     const value = event.target.value
     const name = event.target.name
-console.log(name, value)
-console.log(this.state);
+// console.log(name, value)
+// console.log(this.state);
     this.setState({
       [name]: value
     })

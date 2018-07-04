@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import './App.css';
-import SongsListContainer from './components/SongsListContainer'
+import PlayListsContainer from './components/PlayListsContainer'
 import AddListFormContainer from './components/AddListFormContainer'
 
 
 class App extends Component {
+
   render() {
     return (<div className="App">
-      <SongsListContainer/>
+        <header className="App-header"></header>
+      <PlayListsContainer/>
       <AddListFormContainer/>
     </div>);
   }

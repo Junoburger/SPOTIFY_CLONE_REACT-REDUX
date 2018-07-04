@@ -2,7 +2,7 @@ import * as React from 'react'
 import AddSongFormContainer from './AddSongFormContainer'
 
 
-export default class SongsList extends React.Component{
+export default class PlayList extends React.Component{
   constructor() {
       super()
 
@@ -16,17 +16,19 @@ export default class SongsList extends React.Component{
       this.setState({
         clicked: !this.state.clicked
       })
+      console.log(this.props.selectList.name)
 
     }
 
+
 render(){
-  // const newList = this.props.songsList.concat()
-  // console.log(this.props.songsList[2]);
-  // console.log(newList);
+  console.log(this.props);
+// console.log(this.props.playLists[0].data);
   return (<div>
-    <button  onClick={this.handleClick}><h1>My Play Listno.1</h1></button>
-{this.state.clicked ?   <ul>
-      { this.props.songsList.map(song =>
+    <button  onClick={this.handleClick}><h1>{this.props.playLists[0].title}</h1></button>
+{this.state.clicked ?
+  <ul>
+      { this.props.playLists[0].data.map(song =>
         <li key={song.id} onClick={() => this.props.selectSong(song.id)}>
           <b>{song.title}</b><br/>
             By:
@@ -41,6 +43,7 @@ render(){
 
 
      : null}
+
 
   </div>)
   }

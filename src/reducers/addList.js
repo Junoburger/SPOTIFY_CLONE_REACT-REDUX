@@ -1,9 +1,13 @@
-const reducer = (state = null, action = {}) => {
+const reducer = (state = [], action = {}) => {
+
   switch (action.type) {
     case 'ADD_LIST':
-      return action.payload
-  default:
-    return state
+      return [
+        ...state,
+        action.payload
+      ]
+    default:
+      return state
   }
 }
 

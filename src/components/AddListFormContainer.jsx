@@ -4,19 +4,22 @@ import { connect } from 'react-redux'
 
 
 class AddListFormContainer extends React.PureComponent {
-  addList = (list) => {
+
+
+  addList = (title) => {
     this.props.dispatch({
       type: 'ADD_LIST',
       payload: {
         id: Math.ceil(Math.random()*10000),
-        ...list
+        ...title,
+        data: []
       }
     })
   }
 
 
   render() {
-  
+// console.log(this.addList);
     return <AddListForm addList={this.addList} />
   }
 }
