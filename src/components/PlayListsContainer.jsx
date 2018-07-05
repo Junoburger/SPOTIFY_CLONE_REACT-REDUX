@@ -26,14 +26,27 @@ class PlayListsContainer extends React.PureComponent {
       console.log('selected song:', id)
     }
 
+    render() {
+        const playlistsArray = this.props.playLists
+        console.log(playlistsArray)
+        return (
+            playlistsArray.map((playlist) => <PlayList
+                playLists={this.props.playLists}
+                selectSong={this.selectSong}
+                selectList={this.selectList}
+                key={playlist.id}
+            />)
 
-  render() {
-    return <PlayList
-                          playLists={this.props.playLists}
-                          selectSong={this.selectSong}
-                          selectList={this.selectList}
-                      />
-  }
+        )
+    }
+
+
+
+
+
+
+
+
 }
 
 const mapStateToProps = (state) => {

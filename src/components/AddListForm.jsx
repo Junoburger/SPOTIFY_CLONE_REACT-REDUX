@@ -38,6 +38,7 @@ export default class AddListForm extends React.PureComponent {
   }
 
   render() {
+    // console.log(this.state.title);
     return (<div>
       <button onClick={this.handleClick}><h2>New List+</h2></button>
 

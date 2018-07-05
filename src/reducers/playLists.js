@@ -22,6 +22,29 @@ const initState = [
         album: 'Transformer'
       }
     ]
+  },
+  { id:2,
+    title:'Play list 2',
+    data:[
+    {
+        id: 1,
+        title: 'Whatever happend to my Rock and Roll',
+        artist: 'BlackRebelMoterCycleClub',
+        album: 'B.R.M.C'
+      },
+      {
+        id: 2,
+        title: 'The White Stripes',
+        artist: 'My Doorbell',
+        album: 'Get Behing Me Satan'
+      },
+      {
+        id: 3,
+        title: 'Oh Cody',
+        artist: 'NoBunny',
+        album: 'Raw Romance'
+      }
+    ]
   }
 ]
 const reducer = (state = initState, action = {}) => {
@@ -29,6 +52,7 @@ const reducer = (state = initState, action = {}) => {
     case 'ADD_SONG':
       return [...state,
         action.payload]
+        
         case 'ADD_LIST':
           return [
             ...state,
