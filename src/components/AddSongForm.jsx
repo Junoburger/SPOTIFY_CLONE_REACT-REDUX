@@ -26,10 +26,8 @@ export default class AddSongForm extends React.PureComponent {
       [name]: value
     })
   }
-
   handleSubmit = (event) => {
   event.preventDefault()
-  console.log(this.state);
 
   if (this.state.title && this.state.artist) {
 
@@ -38,12 +36,14 @@ export default class AddSongForm extends React.PureComponent {
       artist: this.state.artist,
       album: this.state.album
     }
-    let selectedPlayList = 1 //Fix this later :)
+    let selectedPlayList = this.state.selectList //Fix this later :)
     this.props.addSong(song, selectedPlayList)
   }
 }
 
   render() {
+    console.log(this.state);
+
 
     return (<div>
       <button onClick={this.handleClick}><h2>New Song+</h2></button>

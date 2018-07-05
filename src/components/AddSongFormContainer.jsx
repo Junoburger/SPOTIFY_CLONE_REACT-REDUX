@@ -19,5 +19,14 @@ this.props.dispatch({
     return <AddSongForm addSong={this.addSong} />
   }
 }
+const mapStateToProps = (state) => {
+// console.log(state.playLists);
+  return {
+    playLists: state.playLists
 
-export default connect(null)(AddSongFormContainer)
+
+
+  }
+}
+
+export default connect(mapStateToProps)(AddSongFormContainer)

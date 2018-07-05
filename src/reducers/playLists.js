@@ -49,23 +49,25 @@ const reducer = (state = initState, action = {}) => {
 
     case 'ADD_LIST':
       return [
+
         ...state,
         action.payload
       ]
-      case 'ADD_SONG':
-            const index = this.state.findIndex(playlist => playlist.id ===
-              action.payload.playlist)
-            console.log(index) //This should be index 0, after looking up playlist id: 1
-            const updatedPlaylistSongs = this.state[index].data
-            updatedPlaylistSongs.push(action.playload.song)
-            return [
-              ...state.slice(0, index), // All playlists before current
-              {
-                ...state[index], //The targeted playlist.
-                ...updatedPlaylistSongs //The updated songs
-              },
-              ...state.slice(index + 1), //All playlists after current
-          ]
+    case 'ADD_SONG':
+      const index = this.getState().findIndex(playlist => playlist.id === action.payload.playlist)
+
+      console.log(index)
+
+      const updatedPlaylistSongs = this.state[index].data
+      updatedPlaylistSongs.push(action.playload.song)
+
+      return [
+        ...state.slice(0, index), {
+          ...state[index],
+          ...updatedPlaylistSongs
+        },
+        ...state.slice(index + 1)
+      ]
 
     default:
       return state

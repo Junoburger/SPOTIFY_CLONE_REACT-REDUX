@@ -23,7 +23,7 @@ class PlayListsContainer extends React.PureComponent {
   }
 
     selectList(id) {
-      console.log('selected song:', id)
+      console.log('selected list:', id)
     }
 
     render() {
@@ -35,7 +35,9 @@ class PlayListsContainer extends React.PureComponent {
                 selectSong={this.selectSong}
                 selectList={this.selectList}
                 key={playlist.id}
-            />)
+            />
+
+          )
 
         )
     }
