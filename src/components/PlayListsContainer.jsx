@@ -17,7 +17,7 @@ class PlayListsContainer extends React.PureComponent {
   }
   selectList = (id) => {
     this.props.dispatch({
-      type: 'SELECT_SONG',
+      type: 'SELECT_LIST',
       payload: id
     })
   }
@@ -31,7 +31,7 @@ class PlayListsContainer extends React.PureComponent {
         console.log(playlistsArray)
         return (
             playlistsArray.map((playlist) => <PlayList
-                playLists={this.props.playLists}
+                playLists={playlist}
                 selectSong={this.selectSong}
                 selectList={this.selectList}
                 key={playlist.id}

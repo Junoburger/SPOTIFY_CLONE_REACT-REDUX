@@ -25,10 +25,10 @@ render(){
   console.log(this.props);
 // console.log(this.props.playLists[0].data);
   return (<div>
-    <button  onClick={this.handleClick}><h1>{this.props.playLists[0].title}</h1></button>
+    <button  onClick={this.handleClick}><h1>{this.props.playLists.title}</h1></button>
 {this.state.clicked ?
   <ul>
-      { this.props.playLists[0].data.map(song =>
+      { this.props.playLists.data.map(song =>
         <li key={song.id} onClick={() => this.props.selectSong(song.id)}>
           <b>{song.title}</b><br/>
             By:

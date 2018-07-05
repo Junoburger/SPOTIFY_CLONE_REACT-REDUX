@@ -34,9 +34,9 @@ const initState = [
       },
       {
         id: 2,
-        title: 'The White Stripes',
-        artist: 'My Doorbell',
-        album: 'Get Behing Me Satan'
+        title: 'U Sexy Thing',
+        artist: 'Crocodiles',
+        album: 'CryBaby Demon/ U Sexy Thing'
       },
       {
         id: 3,
@@ -49,15 +49,16 @@ const initState = [
 ]
 const reducer = (state = initState, action = {}) => {
   switch (action.type) {
-    case 'ADD_SONG':
-      return [...state,
-        action.payload]
-        
+
         case 'ADD_LIST':
           return [
             ...state,
             action.payload
           ]
+          case 'ADD_SONG':
+            return [...state,
+              action.payload]
+
   default:
     return state
   }
