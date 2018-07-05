@@ -28,16 +28,20 @@ export default class AddSongForm extends React.PureComponent {
   }
 
   handleSubmit = (event) => {
-    event.preventDefault()
+  event.preventDefault()
+  console.log(this.state);
 
-    if (this.state.title && this.state.artist) {
-      this.props.addSong({
-        title: this.state.title,
-        artist: this.state.artist,
-        album: this.state.album
-      })
+  if (this.state.title && this.state.artist) {
+
+    let song = {
+      title: this.state.title,
+      artist: this.state.artist,
+      album: this.state.album
     }
+    let selectedPlayList = 1 //Fix this later :)
+    this.props.addSong(song, selectedPlayList)
   }
+}
 
   render() {
 
@@ -63,5 +67,5 @@ export default class AddSongForm extends React.PureComponent {
       : null}
     </div>)
   }
-  // add this to songsList Create here just one input for a name(of the playlist)
+
 }

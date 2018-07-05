@@ -28,7 +28,7 @@ class PlayListsContainer extends React.PureComponent {
 
     render() {
         const playlistsArray = this.props.playLists
-        console.log(playlistsArray)
+        // console.log(playlistsArray)
         return (
             playlistsArray.map((playlist) => <PlayList
                 playLists={playlist}

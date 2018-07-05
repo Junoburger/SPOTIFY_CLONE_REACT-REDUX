@@ -22,7 +22,7 @@ export default class PlayList extends React.Component{
 
 
 render(){
-  console.log(this.props);
+  // console.log(this.props);
 // console.log(this.props.playLists[0].data);
   return (<div>
     <button  onClick={this.handleClick}><h1>{this.props.playLists.title}</h1></button>
