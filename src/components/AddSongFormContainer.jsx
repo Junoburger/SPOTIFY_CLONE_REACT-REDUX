@@ -4,14 +4,16 @@ import { connect } from 'react-redux'
 
 class AddSongFormContainer extends React.PureComponent {
   addSong = (song, targetPlaylist) => {
-this.props.dispatch({
-  type: 'ADD_SONG',
-  payload: {
-    playlist: targetPlaylist,
-    id: Math.ceil(Math.random()*10000),
-    ...song
-    }
-  })
+    console.log(song)
+    const songId = Math.ceil(Math.random()*10000)
+    this.props.dispatch({
+      type: 'ADD_SONG',
+      payload: {
+        song: {id: songId, ...song },
+        playlist: targetPlaylist,
+
+        }
+      })
 }
 
   render() {

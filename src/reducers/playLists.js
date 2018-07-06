@@ -55,13 +55,13 @@ const reducer = (state = initState, action = {}) => {
       ]
     case 'ADD_SONG':
     // const state = this.getState()
+console.log(state);
+      const index = state.findIndex(playlist => playlist.id === action.payload.playlist)
 
-      const index = this.state.findIndex(playlist => playlist.id === action.payload.playlist)
 
-      console.log(index)
 
-      const updatedPlaylistSongs = this.state[index].data
-      updatedPlaylistSongs.push(action.playload.song)
+      const updatedPlaylistSongs = state[index].data
+      updatedPlaylistSongs.push(action.payload.song)
 
       return [
         ...state.slice(0, index), {
