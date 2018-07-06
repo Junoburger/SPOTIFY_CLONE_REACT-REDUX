@@ -54,7 +54,9 @@ const reducer = (state = initState, action = {}) => {
         action.payload
       ]
     case 'ADD_SONG':
-      const index = this.getState().findIndex(playlist => playlist.id === action.payload.playlist)
+    // const state = this.getState()
+
+      const index = this.state.findIndex(playlist => playlist.id === action.payload.playlist)
 
       console.log(index)
 

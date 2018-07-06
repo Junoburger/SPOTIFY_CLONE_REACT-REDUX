@@ -20,12 +20,9 @@ this.props.dispatch({
   }
 }
 const mapStateToProps = (state) => {
-// console.log(state.playLists);
+console.log(state.playLists);
   return {
     playLists: state.playLists
-
-
-
   }
 }
 

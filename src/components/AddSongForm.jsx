@@ -36,13 +36,14 @@ export default class AddSongForm extends React.PureComponent {
       artist: this.state.artist,
       album: this.state.album
     }
-    let selectedPlayList = this.state.selectList //Fix this later :)
+    let selectedPlayList = 1
+    // this.state.playLists //Fix this later :)
     this.props.addSong(song, selectedPlayList)
   }
 }
 
   render() {
-    console.log(this.state);
+    console.log(this.props.addSong);
 
 
     return (<div>

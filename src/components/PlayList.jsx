@@ -20,7 +20,7 @@ export default class PlayList extends React.Component {
   }
 
   render() {
-    console.log(this.props.selectList);
+    // console.log(this.props.selectList);
 
     return (<div>
       <button onClick={this.handleClick}>
